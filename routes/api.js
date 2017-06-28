@@ -37,7 +37,7 @@ router.get('/',cors(), function (req, res, next) {
 
 })
 
-// initialize the bus in the db
+// initialize the buses in the db
 
 router.get('/businit',function(req,res){
     //Initialize 2 upcoming buses
@@ -53,6 +53,8 @@ router.get('/businit',function(req,res){
 
 })
 
+
+//get the time of upcoming buses from API and store the time into db
 
 router.get('/busTime',cors(),function(req, res){
     if(!req.cookies.authStatus){
