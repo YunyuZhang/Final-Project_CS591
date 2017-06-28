@@ -43,33 +43,23 @@ angular.module('cs591',[])
 
         }
 
-        // geenrate the car information
+        // generate the car information
         $scope.generateCar=function(){
           $http.get('http://localhost:3000/api/busTime');
               //.then(function(response){});
           $http.get('http://localhost:3000/api/uberT');
           $http.get('http://localhost:3000/api/uberP');
 
-        };
-
-
-
-
-
-      $scope.initApp = function () {
-          $scope.buttonState = "create";
-          $scope.h2message="Add user";
-          $scope.buttonMessage = "Add User";
-          //$scope.getUsers();
-      }
-    })
-    //This controller handles toggling the display of details in the user list
-    .controller('listController', function ($scope){
-        $scope.display = false;
-
-        $scope.showInfo = function() {
-            $scope.display = !$scope.display;
         }
 
+       
+    })
+    
 
-    });
+
+
+
+
+
+
+      
