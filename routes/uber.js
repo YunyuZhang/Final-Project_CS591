@@ -1,5 +1,5 @@
 /**
- * Created by Forrest on 6/18/17.
+ * Created by Forrest on 6/18/17. This file is for authentication 
  */
 const express = require('express')
 const router = express.Router()
@@ -13,7 +13,7 @@ const mongoose= require("mongoose")
 
 
 
-
+// set up the package
 var node_uber = require('node-uber');
 
 
@@ -24,7 +24,7 @@ var uber = new node_uber({
     refresh_token: config.refresh_token,
     redirect_uri: 'http://localhost:3000/uber/callback',
     access_token: config.access_token,
-    name: 'price and time',
+   
     language: 'en_US', // optional, defaults to en_US
     sandbox: true // optional, defaults to false
 });
@@ -40,7 +40,7 @@ router.get('/',cors(), function(request, response) {
 });
 
 
-
+//get the product info 
 router.get('/product',function(req,res){
     uber.products.getAllForAddressAsync('1056 Commonwealth Avenue, Boston, MA 02215, US')
         .then(function(res) { console.log(res); })
