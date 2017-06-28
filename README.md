@@ -1,10 +1,14 @@
 # Uber vs Bus
-This is a MEAN stack project. The app use Uber and Nextbus API to get the arrriving time of the upcoming buses and the estimate arrive time and price of uberpool. This app is only for personal use. Users are required to login in their Uber account in order to use this app.
+This is a MEAN stack project. The app uses Uber and Nextbus API to get the arriving time of the upcoming buses and the arriving time and price of Uberpool. When the "Make decision" is clicked, the app will suggest whether the user should take uber or bus. In some case, the users will decide by themselves. 
+
+This app is only for personal use. Users are required to login in their Uber account to use this app.
 
 
 # Running
 Use npm start.
 
+
+# The Page
 
 The project looks like
 
