@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Latest compiled and minified jQuery -->
+    <script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Angular (minified) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+    <!--Controllers for this page/app -->
+    <script src="javascripts/controllers.js"></script>
+    <!-- Local styles -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+
+<body ng-app="cs591">
+<div ng-controller="cs591ctrl">
+
+     <div>
+        <button type="submit" class="btn btn-success" ng-disabled="inputForm.$invalid" ng-click="login()">
+           Uber login
+        </button>
+
+    </div>
+
+
+
+    <div>
+        <h2>Welcome to the Uber vs. Bus </h2>
+
+
+        <button type="submit" class="btn btn-primary" ng-disabled="inputForm.$invalid" ng-click="generateCar()">
+            Generate the upcoming car
+        </button>
+        <button type="submit" class="btn btn-primary" ng-disabled="inputForm.$invalid" ng-click="getCar()">
+            See the coming bus and uber
+        </button>
+    </div>
+
+
+    <div class="col-md-6">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Bus</th>
+                    <th>Second Bus</th>
+                    <th>Uberpool</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Time</td>
+                    <td>{{bus1time}} mins</td>
+                    <td>{{bus2time}} mins</td>
+                    <td>{{ubertime}} mins</td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td> {{bus1price}} </td>
+                    <td>{{bus2price}}</td>
+                    <td>{{uberprice}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <div id="under">
+            <button type="submit" class="btn btn-danger" ng-disabled="inputForm.$invalid" ng-click="decision()">
+                Make the decision
+            </button>
+
+
+            <h4> {{result}}</h4>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

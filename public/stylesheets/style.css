@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Trebuchet MS", Helvetica, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.largeText {
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+
+}
+
+div {
+
+  margin-top: 50px;
+  margin-left: 50px;
+
+}
+
+#under{
+  clear:both;
+}
