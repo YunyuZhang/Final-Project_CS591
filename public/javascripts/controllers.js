@@ -8,7 +8,7 @@ angular.module('cs591',[])
     })
     .controller('cs591ctrl', function($scope, $http, $window){
 
-        //READ (GET)
+        //READ the cars data from the db
         $scope.getCar = function() {
             $http.get('http://localhost:3000/api')
                 .then(function(response){
@@ -30,14 +30,15 @@ angular.module('cs591',[])
 
                 })
         };
-        // call the decision algorith,
+        // call the decision algorithm,
         $scope.decision= function() {
             $http.get('http://localhost:3000/api/algo')
                 .then(function(response){
                     $scope.result= response.data
                 })
         }
-
+        
+        // ask user to login 
         $scope.login= function(){
             $window.location.href='http://localhost:3000/uber'
 
